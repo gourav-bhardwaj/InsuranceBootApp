@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk-alpine
 
-ADD ./target/insurance-boot-app.jar insurance-boot-app.jar
+ADD ./target/insurance-boot-app.jar /var/lib/docker/tmp/insurance-boot-app.jar
 
 EXPOSE 8899
 
