@@ -1,6 +1,8 @@
 FROM openjdk:8-jdk-alpine
 
-ADD ./target/insurance-boot-app.jar /app/
+ARG JAR_FILE=/target/insurance-boot-app.jar
+
+ADD ${JAR_FILE} insurance-boot-app.jar
 
 EXPOSE 8899
 
