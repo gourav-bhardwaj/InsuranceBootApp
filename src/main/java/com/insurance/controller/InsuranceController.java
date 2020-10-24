@@ -14,7 +14,7 @@ import java.util.Map;
 @RequestMapping("/insurance")
 public class InsuranceController {
 
-    @GetMapping("/mydemo")
+    @GetMapping("/demo")
     public ResponseEntity<Map<String, Object>> demo() {
         Map<String, Object> respMap = new HashMap<>();
         respMap.put("message", "This is a demo message!");
