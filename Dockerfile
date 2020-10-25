@@ -13,6 +13,6 @@ RUN mvn clean package -Dmaven.test.skip=true
 
 WORKDIR /home/InsuranceBootApp/target
 
-ADD /home/InsuranceBootApp/target/insurance-boot-app.jar .
+ADD insurance-boot-app.jar .
 
 ENTRYPOINT ["java", "-jar", "insurance-boot-app.jar"]
