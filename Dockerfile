@@ -1,10 +1,18 @@
 FROM openjdk:8-jdk-alpine
 
-ARG JAR_FILE=/target/insurance-boot-app.jar
+RUN apk update && apk upgrade
 
-ADD ${JAR_FILE} .
+RUN apk add git
+WORKDIR /home
+RUN git clone https://gourav-bhardwaj:766gobca977@github.com/gourav-bhardwaj/InsuranceBootApp.git
 
-EXPOSE 8998
+WORKDIR /home/InsuranceBootApp
 
-ENTRYPOINT ["java","-jar","insurance-boot-app.jar"]
+RUN apk add maven
+RUN mvn clean package -Dmaven.test.skip=true
 
+WORKDIR /home/InsuranceBootApp/target
+
+ADD /target/insurance-boot-app.jar .
+
+ENTRYPOINT ["java", "-jar", "insurance-boot-app.jar"]
