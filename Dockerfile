@@ -11,6 +11,7 @@ WORKDIR /home/InsuranceBootApp
 RUN apk add maven
 RUN mvn clean package -Dmaven.test.skip=true
 
+VOLUME ["/home/InsuranceBootApp/target"]
 WORKDIR /home/InsuranceBootApp/target
 
 ENTRYPOINT ["java", "-jar", "insurance-boot-app.jar"]
