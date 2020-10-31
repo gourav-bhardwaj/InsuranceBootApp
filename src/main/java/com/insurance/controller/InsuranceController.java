@@ -22,7 +22,7 @@ public class InsuranceController {
         return new ResponseEntity<>(respMap, HttpStatus.OK);
     }
 
-    @GetMapping("/hi")
+    @GetMapping("/joker")
     public ResponseEntity<Map<String, Object>> app() {
         Map<String, Object> respMap = new HashMap<>();
         respMap.put("message", "Hi, i m joker!");
