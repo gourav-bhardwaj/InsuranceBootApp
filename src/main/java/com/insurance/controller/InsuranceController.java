@@ -22,7 +22,7 @@ public class InsuranceController {
         return new ResponseEntity<>(respMap, HttpStatus.OK);
     }
 
-    @GetMapping("/abcd")
+    @GetMapping("/info")
     public ResponseEntity<Map<String, Object>> app() {
         Integer obj=23;
         if(obj != null) {
