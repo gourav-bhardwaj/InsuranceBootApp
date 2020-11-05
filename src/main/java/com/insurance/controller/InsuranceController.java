@@ -24,6 +24,12 @@ public class InsuranceController {
 
     @GetMapping("/abcd")
     public ResponseEntity<Map<String, Object>> app() {
+        Integer obj=23;
+        if(obj != null){
+            if (obj > 0){
+                System.out.println("Text here :: "+obj);
+            }
+        }
         Map<String, Object> respMap = new HashMap<>();
         respMap.put("message", "Hi, i m joker!");
         respMap.put("fulltime", LocalDateTime.now());
