@@ -25,8 +25,8 @@ public class InsuranceController {
     @GetMapping("/abcd")
     public ResponseEntity<Map<String, Object>> app() {
         Integer obj=23;
-        if(obj != null){
-            if (obj > 0){
+        if(obj != null) {
+            if (obj > 0) {
                 System.out.println("Text here :: "+obj);
             }
         }
