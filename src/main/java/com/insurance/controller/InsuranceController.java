@@ -3,6 +3,7 @@ package com.insurance.controller;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,12 +23,11 @@ public class InsuranceController {
         return new ResponseEntity<>(respMap, HttpStatus.OK);
     }
 
-    @GetMapping("/info")
-    public ResponseEntity<Map<String, Object>> app() {
-        Integer obj=23;
-        if(obj != null) {
-            if (obj > 0) {
-                System.out.println("Text here :: "+obj);
+    @GetMapping("/info/{num}")
+    public ResponseEntity<Map<String, Object>> app(@PathVariable Integer num) {
+        if(num != null) {
+            if (num > 0) {
+                System.out.println("Text here :: "+num);
             }
         }
         Map<String, Object> respMap = new HashMap<>();
