@@ -16,7 +16,7 @@ import java.util.Map;
 public class InsuranceController {
 
     @GetMapping("/demo")
-    public ResponseEntity<Map<String, Object>> demo() {
+    public ResponseEntity<Map<String, Object>> demo(){
         Map<String, Object> respMap = new HashMap<>();
         respMap.put("message", "This is a demo message!");
         respMap.put("timestamp", LocalDateTime.now());
